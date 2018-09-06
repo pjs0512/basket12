@@ -1,16 +1,21 @@
 import Vue from 'vue/dist/vue.esm.js'
 import VueRouter from 'vue-router'
 import Index from '../components/index.vue'
+import Gallery from '../components/gallery.vue'
+import Product from '../components/product.vue'
+import Comment from '../components/comment.vue'
 import About from '../components/about.vue'
-import Contact from '../components/contact.vue'
+import Edit from '../components/edit.vue'
 
 Vue.use(VueRouter)
-
 export default new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', component: Index },
+    { path: '/gallery', component: Gallery },
+    { path: '/product', component: Product },
+    { path: '/comment', component: Comment },
     { path: '/about', component: About },
-    { path: '/contact', component: Contact },
+    { path: '/edit', component: Edit },
   ],
 })

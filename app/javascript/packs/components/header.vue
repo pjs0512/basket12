@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <ul id="dropdown" class="dropdown-content menu_el">
-            <li><router-link class="menu_el" to = "/">Top</router-link></li>
-            <li><router-link class="menu_el" to = "/about">About</router-link> </li>
-            <li><router-link class="menu_el" to = "/contact">Contact</router-link></li>
-    </ul>
+  <div class="navbar-fixed">
     <nav>
+      <ul id="dropdown" class="dropdown-content menu_el">
+            <li><router-link class="menu_el" to = "/">홈</router-link></li>
+            <li><router-link class="menu_el" to = "/product">제품</router-link> </li>
+            <li><router-link class="menu_el" to = "/gallery">갤러리</router-link></li>
+            <li><router-link class="menu_el" to = "/comment">구매후기</router-link></li>
+            <li><router-link class="menu_el" to = "/about">문의하기</router-link> </li>
+      </ul>
       <div class="nav-wrapper container">
-          <img href="/" class="logo_img brand-logo center" src="/assets/12basket_small.png"></img>
-        <ul class="right hide-on-med-and-down">
-            <li><router-link class="menu_el" to = "/">Top</router-link></li>
-            <li><router-link class="menu_el" to = "/about">About</router-link> </li>
-            <li><router-link class="menu_el" to = "/contact">Contact</router-link></li>
+          <img href="/" class="logo_img brand-logo" src="/assets/12basket_logo.png"></img>
+        <ul class="right hide-on-med-and-down menu_el">
+            <li><router-link class="menu_el" to = "/">홈</router-link></li>
+            <li><router-link class="menu_el" to = "/product">제품</router-link> </li>
+            <li><router-link class="menu_el" to = "/gallery">갤러리</router-link></li>
+            <li><router-link class="menu_el" to = "/comment">구매후기</router-link></li>
+            <li><router-link class="menu_el" to = "/about">문의하기</router-link> </li>
         </ul>
         <ul class="right hide-on-large-only">
           <li>
@@ -24,3 +28,13 @@
     </nav>
   </div>
 </template>
+<script>
+$(window).scroll(function(){
+  var top=$(window).scrollTop();
+  if(top > 150){
+    $("nav").addClass('navbar-scroll');
+  }else{
+    $("nav").removeClass('navbar-scroll');
+  }
+})
+</script>

@@ -1,38 +1,32 @@
 <template>
-  <div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
-    <div class="carousel_item1 carousel-item black-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
-    </div>
-    <div class="carousel_item2 carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel_item3 carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel_item4 carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
+  <div>
+    <div id="push"></div>
+    <section class="wallpaper valign-wrapper right-align">
+      <div class="main_message_grid container valign-wrapper">
+        <div></div>
+        <div></div>
+            <div class="main_message">
+               <h3 class="center-align white-text">WELCOME</h3>
+               <br/>
+               <h4 class="center-align white-text">열두 광주리 농장에</h4>
+               <h4 class="center-align white-text">어서오세요!</h4>
+            </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-    var instance = M.Carousel.getInstance(elem);
-  });
-   
-  $(document).ready(function(){
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        fullHeight: true,
-        indicators: true
-    });
-  });
+var c_img = 0;
+$(document).ready(function(){
+  for(let i = 1 ; i <5;i++){
+      $('<img src="'+ "/assets/c_img"+i+".jpg" +'">').load(function() {});
+  }
+});
+  setInterval(function (){
+    c_img++;
+    if(c_img >4){
+      c_img = 1;
+    }
+      $('.wallpaper').css("background-image", "url(/assets/c_img"+c_img+".jpg)");  
+},3000);
 </script>

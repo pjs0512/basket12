@@ -18,7 +18,6 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'foreman'
-gem "redis", "~> 4.0"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,6 +26,12 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'redis-rails'
+gem 'mysql2'
+gem 'bootstrap'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'tinymce-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

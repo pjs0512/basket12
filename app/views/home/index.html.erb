@@ -1,11 +1,16 @@
 <div id="app">
     <navbar></navbar>
-    <br/>
-            <carousel></carousel>
+    <carousel></carousel>
+    <div class="main_space"></div>
     
-    <div class="container">
-        <router-view></router-view>
+    <div id="main">
+        <div class="container">
+            <transition 
+                name="fade">
+                    <router-view></router-view>
+            </transition>
+        </div>
     </div>
-    
 </div>
+
 <%= javascript_pack_tag 'application'%>
