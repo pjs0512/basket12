@@ -9,6 +9,7 @@ default: &default
   pool: 5
   timeout: 5000
   host : basket12db.cbw3dhups4rp.ap-southeast-1.rds.amazonaws.com
+  database : basket12
   port : 3306
   encoding : utf8
   username : bas_master

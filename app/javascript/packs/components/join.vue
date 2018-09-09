@@ -8,7 +8,7 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
           <input id="username" v-model="user.username" type="text"/>
-          <label for="username">아이디</label>
+          <label for="username">이름</label>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <button v-on:click="join" class="btn waves-effect waves-light col s12">REGISTER NOW</button>
+          <button v-on:click="join" class="btn waves-effect waves-light col s12">회원 등록 하기</button>
         </div>
       </div>
     </div>
@@ -55,6 +55,8 @@
 </div>
 </template>
 <script>
+import axios from 'axios';
+  
 export default{
     data:function(){
         return {
@@ -69,7 +71,9 @@ export default{
     },
     methods: {
         join:function(){
-            console.log(this.user);
+            axios.post('/api/users',{user : this.user})
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
         },
         jusoComplete:function(e){
             this.user.address = e.postcode + ") " + e.address;

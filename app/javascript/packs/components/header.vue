@@ -7,8 +7,8 @@
             <li><router-link class="menu_el" to = "/gallery">갤러리</router-link></li>
             <li><router-link class="menu_el" to = "/comment">구매후기</router-link></li>
             <li><router-link class="menu_el" to = "/about">문의하기</router-link> </li>
-            <li ><router-link class="menu_el" to = "#!">로그인</router-link> </li>
-            <li><router-link class="menu_el" to = "/#!">회원가입</router-link></li>
+            <li data-target="loginmodal" class="modal-trigger" ><router-link class="menu_el"  to="#!">로그인</router-link> </li>
+            <li data-target="joinmodal" class="modal-trigger" ><router-link class="menu_el" to="#!">회원가입</router-link></li>
       </ul>
       <div class="nav-wrapper container">
           <img href="/" class="logo_img brand-logo" src="/assets/12basket_logo.png"></img>
@@ -33,6 +33,7 @@
   </div>
 </template>
 <script>
+
 $(window).scroll(function(){
   var top=$(window).scrollTop();
   if(top > 150){
