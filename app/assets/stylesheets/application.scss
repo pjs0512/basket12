@@ -125,7 +125,9 @@ section {
 }
 .modal{
     width: 50% !important ; 
-    height: 90% !important ; 
+    max-height: 80%; 
+    overflow: visible;
+    height: 100% !important ; 
 }
 #addressmodal {
     top : 20% !important;
