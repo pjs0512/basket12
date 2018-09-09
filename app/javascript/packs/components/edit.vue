@@ -13,21 +13,31 @@
             language_url: '/assets/ko_KR.js'}
             ">
         </editor>
+        <button v-on:click="test" >눌러방</button>
     </div>
 </template>
 
 <script>
 import Editor from '@tinymce/tinymce-vue';
+
 export default {
     data(){
         return {
-            data : '',
-            
+            contents : '',
         }
     },
     components : {
-        'editor': Editor // <- Important part
+        'editor': Editor,
+    },
+    render :{
+        
+    },
+    mounted() {
+    },
+    methods :{
+        test :function(){
+            console.log(this.contents);
+        },
     }
 }
-
 </script>

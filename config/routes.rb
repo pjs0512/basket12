@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/gallery', to: 'home#index'
   get '/about', to: 'home#index'
   get '/edit', to: 'home#index'
+  get '/login', to: 'home#index'
+  get '/join', to: 'home#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
