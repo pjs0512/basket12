@@ -72,8 +72,8 @@ export default{
     methods: {
         join:function(){
             axios.post('/api/users',{user : this.user})
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+            .then(res => {alert('회원가입이 완료 되었습니다!'); location.href="/"})
+            .catch(err => {alert('회원가입에 실패 하였습니다!'); location.href="/"});
         },
         jusoComplete:function(e){
             this.user.address = e.postcode + ") " + e.address;

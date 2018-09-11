@@ -10,6 +10,7 @@ class Api::UsersController < ApplicationController
           render json: @user.errors, status: :unprocessable_entity
         end
     end
+    
     def update
     end
     private

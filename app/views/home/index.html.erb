@@ -1,14 +1,12 @@
 <div id="app">
-    <navbar></navbar>
+    <div class="main_space">
     <carousel></carousel>
-    <div class="main_space"></div>
+    <navbar></navbar>
+    </div>
     <div id="main">
-        <div class="container">
-            <transition 
-                name="fade">
+            <transition name="fade">
                     <router-view></router-view>
             </transition>
-        </div>
     </div>
     <joinmodal></joinmodal>
     <loginmodal><loginmodal>
