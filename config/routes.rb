@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get '/comment', to: 'home#index'
   get '/gallery', to: 'home#index'
   get '/about', to: 'home#index'
-  get '/edit', to: 'home#index'
   
   namespace :api, format: 'json' do
     resources :users, only: [:index, :create, :update]
     resources :sessions, only: [:new, :create, :destroy]
+    resources :images, only: [:new ,:index, :create, :update]
   end
 end

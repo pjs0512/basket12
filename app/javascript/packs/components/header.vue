@@ -12,7 +12,7 @@
             <li v-if="!$session.get('is_login')" data-target="joinmodal" class="modal-trigger" ><router-link class="menu_el" to="#!">회원가입</router-link></li>
       </ul>
       <div class="nav-wrapper container">
-          <img href="/" class="logo_img brand-logo" src="/assets/12basket_logo.png"></img>
+          <router-lonk to="/"><img href="/" class="logo_img brand-logo" src="/assets/12basket_logo.png"></img></router-lonk>
         <ul class="right hide-on-med-and-down menu_el">
             <li><router-link class="menu_el" to = "/">홈</router-link></li>
             <li><router-link class="menu_el" to = "/product">제품</router-link> </li>
@@ -38,9 +38,11 @@
 import axios from 'axios';
 
 export default{
-  data: function(){
-    is_login : false;
-    user_id : '';
+  data : function() {
+    return{
+          is_login: false,
+          user_id: ''
+    }
   },
   mounted :function(){
   },

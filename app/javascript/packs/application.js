@@ -3,9 +3,10 @@ import Carousel from './components/carousel.vue';
 import Header from './components/header.vue'
 import Router from './router/router'
 import VueDaumPostcode from 'vue-daum-postcode';
-import JoinModal from  './components/join.vue';
-import LoginModal from './components/login.vue';
-
+import JoinModal from  './components/modals/join.vue';
+import LoginModal from './components/modals/login.vue';
+import EditModal from './components/modals/edit.vue';
+import Footers from './components/footers.vue';
 Vue.use(VueDaumPostcode)
 
 var app = new Vue({
@@ -14,8 +15,9 @@ var app = new Vue({
     components:{
         'navbar' : Header,
         'carousel' : Carousel,
-        'test' : VueDaumPostcode,
+        'loginmodal' : LoginModal,
         'joinmodal' : JoinModal,
-        'loginmodal' :LoginModal,
+        'editmodal' : EditModal,
+        'footers' : Footers
     },
 });

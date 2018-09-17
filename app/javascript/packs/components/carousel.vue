@@ -31,4 +31,8 @@ $(document).ready(function(){
     }
       $('.wallpaper').css("background-image", "url(/assets/c_img"+c_img+".jpg)");  
 },3000);
+$(window).scroll(function(){
+  var top= $(window).scrollTop();
+  $('.wallpaper').css("filter","blur("+top/200+"px)");
+})
 </script>
